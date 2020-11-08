@@ -52,11 +52,11 @@ class SignMessageActionTest extends BaseTestCase
 
     /**
      * @dataProvider does_not_support_message_provider
-     * @expectedException \LogicException
-     * @expectedExceptionMessage Unexpected message type
      */
     public function test_does_not_support_message(SamlMessage $message)
     {
+        $this->expectException('LogicException');
+        $this->expectExceptionMessage('Unexpected message type');
         $action = new SignMessageAction($this->getLoggerMock(), $this->getSignatureResolverMock());
 
         $context = $this->getProfileContext();

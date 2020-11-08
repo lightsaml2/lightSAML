@@ -23,32 +23,26 @@ class BindingFactoryTest extends BaseTestCase
         $this->assertInstanceOf('LightSaml\Binding\HttpPostBinding', $binding);
     }
 
-    /**
-     * @expectedException \LogicException
-     * @expectedExceptionMessage SOAP binding not implemented
-     */
     public function test__create_throws_not_implemented_error_for_soap()
     {
+        $this->expectException('LogicException');
+        $this->expectExceptionMessage('SOAP binding not implemented');
         $factory = new BindingFactory();
         $factory->create(SamlConstants::BINDING_SAML2_SOAP);
     }
 
-    /**
-     * @expectedException \LogicException
-     * @expectedExceptionMessage Artifact binding not implemented
-     */
     public function test__create_throws_not_implemented_error_for_artifact()
     {
+        $this->expectException('LogicException');
+        $this->expectExceptionMessage('Artifact binding not implemented');
         $factory = new BindingFactory();
         $factory->create(SamlConstants::BINDING_SAML2_HTTP_ARTIFACT);
     }
 
-    /**
-     * @expectedException \LightSaml\Error\LightSamlBindingException
-     * @expectedExceptionMessage Unknown binding type 'foo'
-     */
     public function test__create_throws_for_unknown_binding()
     {
+        $this->expectException('LightSaml\Error\LightSamlBindingException');
+        $this->expectExceptionMessage('Unknown binding type \'foo\'');
         $factory = new BindingFactory();
         $factory->create('foo');
     }

@@ -38,35 +38,29 @@ class ProfileContextBuilderTest extends BaseTestCase
         $this->assertSame($value, $builder->{$getter}());
     }
 
-    /**
-     * @expectedException \LightSaml\Error\LightSamlBuildException
-     * @expectedExceptionMessage HTTP Request not set
-     */
     public function test_build_throws_exception_when_request_not_set()
     {
+        $this->expectException('LightSaml\Error\LightSamlBuildException');
+        $this->expectExceptionMessage('HTTP Request not set');
         $builder = new ProfileContextBuilder();
 
         $builder->build();
     }
 
-    /**
-     * @expectedException \LightSaml\Error\LightSamlBuildException
-     * @expectedExceptionMessage Own EntityDescriptor not set
-     */
     public function test_build_throws_exception_when_own_entity_descriptor_not_set()
     {
+        $this->expectException('LightSaml\Error\LightSamlBuildException');
+        $this->expectExceptionMessage('Own EntityDescriptor not set');
         $builder = new ProfileContextBuilder();
         $builder->setRequest(new Request());
 
         $builder->build();
     }
 
-    /**
-     * @expectedException \LightSaml\Error\LightSamlBuildException
-     * @expectedExceptionMessage ProfileID not set
-     */
     public function test_build_throws_exception_when_profile_id_not_set()
     {
+        $this->expectException('LightSaml\Error\LightSamlBuildException');
+        $this->expectExceptionMessage('ProfileID not set');
         $builder = new ProfileContextBuilder();
         $builder->setRequest(new Request());
         $builder->setOwnEntityDescriptorProvider(new FixedEntityDescriptorProvider(new EntityDescriptor()));
@@ -74,12 +68,10 @@ class ProfileContextBuilderTest extends BaseTestCase
         $builder->build();
     }
 
-    /**
-     * @expectedException \LightSaml\Error\LightSamlBuildException
-     * @expectedExceptionMessage Profile role not set
-     */
     public function test_build_throws_exception_when_profile_role_not_set()
     {
+        $this->expectException('LightSaml\Error\LightSamlBuildException');
+        $this->expectExceptionMessage('Profile role not set');
         $builder = new ProfileContextBuilder();
         $builder->setRequest(new Request());
         $builder->setOwnEntityDescriptorProvider(new FixedEntityDescriptorProvider(new EntityDescriptor()));

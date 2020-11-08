@@ -50,23 +50,19 @@ class SignatureStringReaderTest extends BaseTestCase
         $this->assertTrue($result);
     }
 
-    /**
-     * @expectedException \LogicException
-     * @expectedExceptionMessage SignatureStringReader can not be serialized
-     */
     public function test_serialize_throws_exception()
     {
+        $this->expectException('LogicException');
+        $this->expectExceptionMessage('SignatureStringReader can not be serialized');
         $context = new SerializationContext();
         $reader = new SignatureStringReader();
         $reader->serialize($context->getDocument(), $context);
     }
 
-    /**
-     * @expectedException \LogicException
-     * @expectedExceptionMessage SignatureStringReader can not be deserialized
-     */
     public function test_deserialize_throws_exception()
     {
+        $this->expectException('LogicException');
+        $this->expectExceptionMessage('SignatureStringReader can not be deserialized');
         $context = new DeserializationContext();
         $reader = new SignatureStringReader();
         $reader->deserialize($context->getDocument(), $context);

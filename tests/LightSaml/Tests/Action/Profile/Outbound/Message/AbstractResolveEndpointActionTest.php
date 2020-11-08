@@ -29,9 +29,6 @@ abstract class AbstractResolveEndpointActionTest extends BaseTestCase
     /** @var  EndpointResolverInterface|\PHPUnit_Framework_MockObject_MockObject */
     protected $endpointResolver;
 
-    /**
-     *
-     */
     protected function setUp()
     {
         $this->logger = $this->getLoggerMock();

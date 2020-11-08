@@ -13,12 +13,10 @@ use Symfony\Component\HttpFoundation\Request;
 
 class HttpPostBindingTest extends BaseTestCase
 {
-    /**
-     * @expectedException \LightSaml\Error\LightSamlBindingException
-     * @expectedExceptionMessage Missing SAMLRequest or SAMLResponse parameter
-     */
     public function test_receive_throws_when_no_message()
     {
+        $this->expectException('LightSaml\Error\LightSamlBindingException');
+        $this->expectExceptionMessage('Missing SAMLRequest or SAMLResponse parameter');
         $request = new Request();
 
         $binding = new HttpPostBinding();

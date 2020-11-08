@@ -100,12 +100,10 @@ class DecryptAssertionsActionTest extends BaseTestCase
         $action->execute($context);
     }
 
-    /**
-     * @expectedException \LightSaml\Error\LightSamlContextException
-     * @expectedExceptionMessage No credentials resolved for assertion decryption
-     */
     public function test_throws_context_exception_when_no_credentials_resolved()
     {
+        $this->expectException('LightSaml\Error\LightSamlContextException');
+        $this->expectExceptionMessage('No credentials resolved for assertion decryption');
         $action = new DecryptAssertionsAction(
             $loggerMock = $this->getLoggerMock(),
             $credentialResolverMock = $this->getCredentialResolverMock()

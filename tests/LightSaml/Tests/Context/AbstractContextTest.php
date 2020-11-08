@@ -71,12 +71,10 @@ class AbstractContextTest extends BaseTestCase
         $this->assertNull($context->getSubContext('other'));
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage Expected object or ContextInterface
-     */
     public function test_add_sub_context_throws_if_not_a_context_value()
     {
+        $this->expectException('InvalidArgumentException');
+        $this->expectExceptionMessage('Expected object or ContextInterface');
         $context = $this->getContextMock();
         $context->addSubContext($name = 'some', '123');
         $context->getSubContext($name);

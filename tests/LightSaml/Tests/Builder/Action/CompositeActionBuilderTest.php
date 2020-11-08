@@ -11,20 +11,16 @@ use LightSaml\Tests\Mock\Action\FooAction;
 
 class CompositeActionBuilderTest extends BaseTestCase
 {
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function test__throws_on_priority_true()
     {
+        $this->expectException('InvalidArgumentException');
         $compositeBuilder = new CompositeActionBuilder();
         $compositeBuilder->add(new FooAction(), true);
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function test__throws_on_priority_string()
     {
+        $this->expectException('InvalidArgumentException');
         $compositeBuilder = new CompositeActionBuilder();
         $compositeBuilder->add(new FooAction(), "asc");
     }

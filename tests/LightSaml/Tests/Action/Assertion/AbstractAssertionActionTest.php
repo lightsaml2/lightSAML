@@ -28,12 +28,10 @@ class AbstractAssertionActionTest extends BaseTestCase
         $action->execute($context);
     }
 
-    /**
-     * @expectedException \LightSaml\Error\LightSamlContextException
-     * @expectedExceptionMessage Expected AssertionContext
-     */
     public function test_throws_context_exception_for_non_assertion_context()
     {
+        $this->expectException('LightSaml\Error\LightSamlContextException');
+        $this->expectExceptionMessage('Expected AssertionContext');
         $action = $this->getAbstractAssertionActionMock([$this->getLoggerMock()]);
         $action->execute($this->getMockBuilder(ContextInterface::class)->getMock());
     }
