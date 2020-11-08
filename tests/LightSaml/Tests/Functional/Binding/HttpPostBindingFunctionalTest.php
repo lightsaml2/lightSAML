@@ -147,7 +147,7 @@ class HttpPostBindingFunctionalTest extends BaseTestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\Symfony\Component\EventDispatcher\EventDispatcherInterface
+     * @return \PHPUnit\Framework\MockObject\MockObject|\Symfony\Component\EventDispatcher\EventDispatcherInterface
      */
     private function getEventDispatcherMock()
     {

@@ -43,7 +43,7 @@ class SpSsoStateActionTest extends BaseTestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Resolver\Session\SessionProcessorInterface
+     * @return \PHPUnit\Framework\MockObject\MockObject|\LightSaml\Resolver\Session\SessionProcessorInterface
      */
     private function getSessionProcessorMock()
     {

@@ -89,7 +89,7 @@ class MessageContextHelperTest extends BaseTestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|SamlMessage
+     * @return \PHPUnit\Framework\MockObject\MockObject|SamlMessage
      */
     private function getMessageMock()
     {

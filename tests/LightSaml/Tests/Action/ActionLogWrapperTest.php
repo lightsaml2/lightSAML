@@ -38,7 +38,7 @@ class ActionLogWrapperTest extends BaseTestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|ActionInterface
+     * @return \PHPUnit\Framework\MockObject\MockObject|ActionInterface
      */
     private function getActionMock()
     {
@@ -46,7 +46,7 @@ class ActionLogWrapperTest extends BaseTestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Context\ContextInterface
+     * @return \PHPUnit\Framework\MockObject\MockObject|\LightSaml\Context\ContextInterface
      */
     private function getContextMock()
     {

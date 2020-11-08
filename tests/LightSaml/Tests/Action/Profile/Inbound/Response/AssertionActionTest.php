@@ -93,7 +93,7 @@ class AssertionActionTest extends BaseTestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Action\ActionInterface
+     * @return \PHPUnit\Framework\MockObject\MockObject|\LightSaml\Action\ActionInterface
      */
     private function getActionMock()
     {

@@ -240,7 +240,7 @@ EOT;
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|AbstractContext
+     * @return \PHPUnit\Framework\MockObject\MockObject|AbstractContext
      */
     private function getContextMock()
     {

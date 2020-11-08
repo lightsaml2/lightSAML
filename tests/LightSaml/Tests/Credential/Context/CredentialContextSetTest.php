@@ -41,7 +41,7 @@ class CredentialContextSetTest extends BaseTestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Credential\Context\MetadataCredentialContext
+     * @return \PHPUnit\Framework\MockObject\MockObject|\LightSaml\Credential\Context\MetadataCredentialContext
      */
     private function getMetadataContextMock()
     {

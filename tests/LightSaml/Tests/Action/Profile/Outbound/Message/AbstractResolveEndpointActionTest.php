@@ -20,13 +20,13 @@ use Psr\Log\LoggerInterface;
 
 abstract class AbstractResolveEndpointActionTest extends BaseTestCase
 {
-    /** @var ResolveEndpointBaseAction|\PHPUnit_Framework_MockObject_MockObject */
+    /** @var ResolveEndpointBaseAction|\PHPUnit\Framework\MockObject\MockObject */
     protected $action;
 
-    /** @var \Psr\Log\LoggerInterface|\PHPUnit_Framework_MockObject_MockObject */
+    /** @var \Psr\Log\LoggerInterface|\PHPUnit\Framework\MockObject\MockObject */
     protected $logger;
 
-    /** @var  EndpointResolverInterface|\PHPUnit_Framework_MockObject_MockObject */
+    /** @var  EndpointResolverInterface|\PHPUnit\Framework\MockObject\MockObject */
     protected $endpointResolver;
 
     protected function setUp(): void

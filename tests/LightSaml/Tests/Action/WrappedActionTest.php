@@ -12,9 +12,9 @@ class WrappedActionTest extends BaseTestCase
     {
         $context = $this->getContextMock();
 
-        /** @var ActionInterface|\PHPUnit_Framework_MockObject_MockObject $action */
+        /** @var ActionInterface|\PHPUnit\Framework\MockObject\MockObject $action */
         $action = $this->getMockBuilder(ActionInterface::class)->getMock();
-        /** @var WrappedAction|\PHPUnit_Framework_MockObject_MockObject $wrapper */
+        /** @var WrappedAction|\PHPUnit\Framework\MockObject\MockObject $wrapper */
         $wrapper = $this->getMockForAbstractClass(WrappedAction::class, array($action));
 
         $beforeCalled = false;
@@ -59,7 +59,7 @@ class WrappedActionTest extends BaseTestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Context\ContextInterface
+     * @return \PHPUnit\Framework\MockObject\MockObject|\LightSaml\Context\ContextInterface
      */
     private function getContextMock()
     {

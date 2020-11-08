@@ -52,7 +52,7 @@ class AbstractCredentialTest extends BaseTestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Credential\AbstractCredential
+     * @return \PHPUnit\Framework\MockObject\MockObject|\LightSaml\Credential\AbstractCredential
      */
     private function getAbstractCredentialMock()
     {

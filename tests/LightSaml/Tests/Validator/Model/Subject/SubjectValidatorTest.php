@@ -155,7 +155,7 @@ class SubjectValidatorTest extends BaseTestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Validator\Model\NameId\NameIdValidatorInterface
+     * @return \PHPUnit\Framework\MockObject\MockObject|\LightSaml\Validator\Model\NameId\NameIdValidatorInterface
      */
     public function getNameIdValidatorMock()
     {

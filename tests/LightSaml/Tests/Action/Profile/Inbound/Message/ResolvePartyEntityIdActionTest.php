@@ -191,7 +191,7 @@ class ResolvePartyEntityIdActionTest extends BaseTestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Store\TrustOptions\TrustOptionsStoreInterface
+     * @return \PHPUnit\Framework\MockObject\MockObject|\LightSaml\Store\TrustOptions\TrustOptionsStoreInterface
      */
     private function getTrustOptionsStore()
     {
