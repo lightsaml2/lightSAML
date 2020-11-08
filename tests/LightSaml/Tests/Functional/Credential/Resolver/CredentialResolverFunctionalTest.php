@@ -19,7 +19,7 @@ use LightSaml\Store\Credential\StaticCredentialStore;
 use LightSaml\Store\EntityDescriptor\FixedEntityDescriptorStore;
 use LightSaml\Tests\BaseTestCase;
 
-class ResolverFunctionalTest extends BaseTestCase
+class CredentialResolverFunctionalTest extends BaseTestCase
 {
     public function test_idp2()
     {
