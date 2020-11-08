@@ -105,7 +105,7 @@ class CompositeTrustOptionsStoreTest extends BaseTestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|TrustOptionsStoreInterface
+     * @return \PHPUnit\Framework\MockObject\MockObject|TrustOptionsStoreInterface
      */
     private function getTrustOptionsStoreMock()
     {

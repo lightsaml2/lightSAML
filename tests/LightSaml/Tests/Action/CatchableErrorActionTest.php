@@ -61,7 +61,7 @@ class CatchableErrorActionTest extends BaseTestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Action\ActionInterface
+     * @return \PHPUnit\Framework\MockObject\MockObject|\LightSaml\Action\ActionInterface
      */
     private function getActionMock()
     {
@@ -69,7 +69,7 @@ class CatchableErrorActionTest extends BaseTestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Context\ContextInterface
+     * @return \PHPUnit\Framework\MockObject\MockObject|\LightSaml\Context\ContextInterface
      */
     private function getContextMock()
     {

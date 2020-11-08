@@ -21,7 +21,7 @@ class MetadataCredentialContextTest extends BaseTestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Model\Metadata\KeyDescriptor
+     * @return \PHPUnit\Framework\MockObject\MockObject|\LightSaml\Model\Metadata\KeyDescriptor
      */
     private function getKeyDescriptorMock()
     {
@@ -29,7 +29,7 @@ class MetadataCredentialContextTest extends BaseTestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Model\Metadata\RoleDescriptor
+     * @return \PHPUnit\Framework\MockObject\MockObject|\LightSaml\Model\Metadata\RoleDescriptor
      */
     private function getRoleDescriptorMock()
     {
@@ -37,7 +37,7 @@ class MetadataCredentialContextTest extends BaseTestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Model\Metadata\EntityDescriptor
+     * @return \PHPUnit\Framework\MockObject\MockObject|\LightSaml\Model\Metadata\EntityDescriptor
      */
     private function getEntityDescriptorMock()
     {

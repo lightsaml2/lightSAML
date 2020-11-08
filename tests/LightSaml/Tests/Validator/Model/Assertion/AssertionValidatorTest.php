@@ -432,7 +432,7 @@ class AssertionValidatorTest extends BaseTestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Validator\Model\NameId\NameIdValidatorInterface
+     * @return \PHPUnit\Framework\MockObject\MockObject|\LightSaml\Validator\Model\NameId\NameIdValidatorInterface
      */
     private function getNameIdValidatorMock()
     {
@@ -440,7 +440,7 @@ class AssertionValidatorTest extends BaseTestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Validator\Model\Statement\StatementValidatorInterface
+     * @return \PHPUnit\Framework\MockObject\MockObject|\LightSaml\Validator\Model\Statement\StatementValidatorInterface
      */
     private function getStatementValidatorMock()
     {
@@ -448,7 +448,7 @@ class AssertionValidatorTest extends BaseTestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Validator\Model\Subject\SubjectValidatorInterface
+     * @return \PHPUnit\Framework\MockObject\MockObject|\LightSaml\Validator\Model\Subject\SubjectValidatorInterface
      */
     private function getSubjectValidatorMock()
     {

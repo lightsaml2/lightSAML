@@ -67,7 +67,7 @@ class CompositeActionBuilderTest extends BaseTestCase
      * @param int $expectedOrder
      * @param int $order
      *
-     * @return \PHPUnit_Framework_MockObject_MockObject|ActionInterface
+     * @return \PHPUnit\Framework\MockObject\MockObject|ActionInterface
      */
     private function getActionMock($expectedOrder, &$order)
     {

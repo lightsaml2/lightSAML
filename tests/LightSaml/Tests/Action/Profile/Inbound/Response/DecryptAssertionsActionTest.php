@@ -128,7 +128,7 @@ class DecryptAssertionsActionTest extends BaseTestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Credential\CredentialInterface
+     * @return \PHPUnit\Framework\MockObject\MockObject|\LightSaml\Credential\CredentialInterface
      */
     private function getCredentialMock()
     {
@@ -136,7 +136,7 @@ class DecryptAssertionsActionTest extends BaseTestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Model\Assertion\EncryptedAssertionReader
+     * @return \PHPUnit\Framework\MockObject\MockObject|\LightSaml\Model\Assertion\EncryptedAssertionReader
      */
     private function getEncryptedAssertionReaderMock()
     {

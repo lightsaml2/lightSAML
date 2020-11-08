@@ -13,7 +13,7 @@ use PHPUnit\Framework\TestCase;
 abstract class BaseTestCase extends TestCase
 {
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\Psr\Log\LoggerInterface
+     * @return \PHPUnit\Framework\MockObject\MockObject|\Psr\Log\LoggerInterface
      */
     public function getLoggerMock()
     {
@@ -21,7 +21,7 @@ abstract class BaseTestCase extends TestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Provider\TimeProvider\TimeProviderInterface
+     * @return \PHPUnit\Framework\MockObject\MockObject|\LightSaml\Provider\TimeProvider\TimeProviderInterface
      */
     public function getTimeProviderMock()
     {
@@ -29,7 +29,7 @@ abstract class BaseTestCase extends TestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Model\Metadata\EndpointReference
+     * @return \PHPUnit\Framework\MockObject\MockObject|\LightSaml\Model\Metadata\EndpointReference
      */
     public function getEndpointReferenceMock(Endpoint $endpoint)
     {
@@ -43,7 +43,7 @@ abstract class BaseTestCase extends TestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Resolver\Endpoint\EndpointResolverInterface
+     * @return \PHPUnit\Framework\MockObject\MockObject|\LightSaml\Resolver\Endpoint\EndpointResolverInterface
      */
     public function getEndpointResolverMock()
     {
@@ -80,7 +80,7 @@ abstract class BaseTestCase extends TestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Store\Request\RequestStateStoreInterface
+     * @return \PHPUnit\Framework\MockObject\MockObject|\LightSaml\Store\Request\RequestStateStoreInterface
      */
     public function getRequestStateStoreMock()
     {
@@ -88,7 +88,7 @@ abstract class BaseTestCase extends TestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Binding\BindingFactoryInterface
+     * @return \PHPUnit\Framework\MockObject\MockObject|\LightSaml\Binding\BindingFactoryInterface
      */
     public function getBindingFactoryMock()
     {
@@ -96,7 +96,7 @@ abstract class BaseTestCase extends TestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Binding\AbstractBinding
+     * @return \PHPUnit\Framework\MockObject\MockObject|\LightSaml\Binding\AbstractBinding
      */
     public function getBindingMock()
     {
@@ -104,7 +104,7 @@ abstract class BaseTestCase extends TestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Resolver\Signature\SignatureResolverInterface
+     * @return \PHPUnit\Framework\MockObject\MockObject|\LightSaml\Resolver\Signature\SignatureResolverInterface
      */
     public function getSignatureResolverMock()
     {
@@ -112,7 +112,7 @@ abstract class BaseTestCase extends TestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Credential\X509Certificate
+     * @return \PHPUnit\Framework\MockObject\MockObject|\LightSaml\Credential\X509Certificate
      */
     public function getX509CertificateMock()
     {
@@ -120,7 +120,7 @@ abstract class BaseTestCase extends TestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Validator\Model\Assertion\AssertionValidatorInterface
+     * @return \PHPUnit\Framework\MockObject\MockObject|\LightSaml\Validator\Model\Assertion\AssertionValidatorInterface
      */
     public function getAssertionValidatorMock()
     {
@@ -128,7 +128,7 @@ abstract class BaseTestCase extends TestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Store\EntityDescriptor\EntityDescriptorStoreInterface
+     * @return \PHPUnit\Framework\MockObject\MockObject|\LightSaml\Store\EntityDescriptor\EntityDescriptorStoreInterface
      */
     public function getEntityDescriptorStoreMock()
     {
@@ -151,7 +151,7 @@ abstract class BaseTestCase extends TestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Store\Id\IdStoreInterface
+     * @return \PHPUnit\Framework\MockObject\MockObject|\LightSaml\Store\Id\IdStoreInterface
      */
     public function getIdStoreMock()
     {
@@ -159,7 +159,7 @@ abstract class BaseTestCase extends TestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Validator\Model\Assertion\AssertionTimeValidatorInterface
+     * @return \PHPUnit\Framework\MockObject\MockObject|\LightSaml\Validator\Model\Assertion\AssertionTimeValidatorInterface
      */
     public function getAssertionTimeValidatorMock()
     {
@@ -167,7 +167,7 @@ abstract class BaseTestCase extends TestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Criteria\CriteriaInterface
+     * @return \PHPUnit\Framework\MockObject\MockObject|\LightSaml\Criteria\CriteriaInterface
      */
     public function getCriteriaMock()
     {
@@ -175,7 +175,7 @@ abstract class BaseTestCase extends TestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Resolver\Credential\CredentialResolverInterface
+     * @return \PHPUnit\Framework\MockObject\MockObject|\LightSaml\Resolver\Credential\CredentialResolverInterface
      */
     public function getCredentialResolverMock()
     {
@@ -183,7 +183,7 @@ abstract class BaseTestCase extends TestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Credential\X509CredentialInterface
+     * @return \PHPUnit\Framework\MockObject\MockObject|\LightSaml\Credential\X509CredentialInterface
      */
     public function getX509CredentialMock()
     {
@@ -191,7 +191,7 @@ abstract class BaseTestCase extends TestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\Symfony\Component\HttpFoundation\Session\SessionInterface
+     * @return \PHPUnit\Framework\MockObject\MockObject|\Symfony\Component\HttpFoundation\Session\SessionInterface
      */
     public function getSessionMock()
     {
@@ -199,7 +199,7 @@ abstract class BaseTestCase extends TestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\RobRichards\XMLSecLibs\XMLSecurityKey
+     * @return \PHPUnit\Framework\MockObject\MockObject|\RobRichards\XMLSecLibs\XMLSecurityKey
      */
     public function getXmlSecurityKeyMock()
     {

@@ -136,7 +136,7 @@ class MessageSignatureValidatorActionTest extends BaseTestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Validator\Model\Signature\SignatureValidatorInterface
+     * @return \PHPUnit\Framework\MockObject\MockObject|\LightSaml\Validator\Model\Signature\SignatureValidatorInterface
      */
     private function getSignatureValidatorMock()
     {
@@ -144,7 +144,7 @@ class MessageSignatureValidatorActionTest extends BaseTestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Credential\CredentialInterface
+     * @return \PHPUnit\Framework\MockObject\MockObject|\LightSaml\Credential\CredentialInterface
      */
     private function getCredentialMock()
     {

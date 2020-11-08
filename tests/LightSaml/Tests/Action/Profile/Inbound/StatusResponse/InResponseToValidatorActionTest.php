@@ -84,7 +84,7 @@ class InResponseToValidatorActionTest extends BaseTestCase
     /**
      * @param string $inResponseTo
      *
-     * @return \PHPUnit_Framework_MockObject_MockObject|\LightSaml\Model\Protocol\StatusResponse
+     * @return \PHPUnit\Framework\MockObject\MockObject|\LightSaml\Model\Protocol\StatusResponse
      */
     private function getStatusResponseMock($inResponseTo = null)
     {
