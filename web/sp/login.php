@@ -13,16 +13,16 @@ $builder = new \LightSaml\Builder\Profile\WebBrowserSso\Sp\SsoSpSendAuthnRequest
 
 $buildContainer->getSystemContainer()->getEventDispatcher()
     ->addListener(
-        \LightSaml\Event\Events::BINDING_MESSAGE_SENT,
-        function (\Symfony\Component\EventDispatcher\GenericEvent $event) {
+        \LightSaml\Event\BindingMessageSent::class,
+        function (\LightSaml\Event\BindingMessageSent $event) {
             //var_dump($event->getSubject());
             //exit;
         }
     );
 $buildContainer->getSystemContainer()->getEventDispatcher()
     ->addListener(
-        \LightSaml\Event\Events::BEFORE_ENCRYPT,
-        function (\Symfony\Component\EventDispatcher\GenericEvent $event) {
+        \LightSaml\Event\BeforeEncrypt::class,
+        function (\LightSaml\Event\BeforeEncrypt $event) {
             /** @var \LightSaml\Context\Profile\ProfileContext $context */
             $context = $event->getSubject();
             $context->getOutboundMessage()->setRelayState('relayState');

@@ -3,9 +3,10 @@
 namespace LightSaml\Tests\Functional\Binding;
 
 use LightSaml\Binding\HttpRedirectBinding;
+use LightSaml\Event\BindingMessageReceived;
+use LightSaml\Event\BindingMessageSent;
 use LightSaml\Model\Context\DeserializationContext;
 use LightSaml\Context\Profile\MessageContext;
-use LightSaml\Event\Events;
 use LightSaml\Model\Protocol\AuthnRequest;
 use LightSaml\Model\XmlDSig\SignatureStringReader;
 use LightSaml\Model\XmlDSig\SignatureWriter;
@@ -32,11 +33,10 @@ class HttpRedirectBindingFunctionalTest extends BaseTestCase
         $eventDispatcherMock = $this->getEventDispatcherMock();
         $eventDispatcherMock->expects($this->once())
             ->method('dispatch')
-            ->willReturnCallback(function (GenericEvent $event, $name) {
-                $this->assertEquals(Events::BINDING_MESSAGE_SENT, $name);
-                $this->assertNotEmpty($event->getSubject());
+            ->willReturnCallback(function (BindingMessageSent $event) {
+                $this->assertNotEmpty($event->getMessageString());
                 $doc = new \DOMDocument();
-                $doc->loadXML($event->getSubject());
+                $doc->loadXML($event->getMessageString());
                 $this->assertEquals('AuthnRequest', $doc->firstChild->localName);
 
                 return $event;
@@ -124,11 +124,10 @@ class HttpRedirectBindingFunctionalTest extends BaseTestCase
         $eventDispatcherMock = $this->getEventDispatcherMock();
         $eventDispatcherMock->expects($this->once())
             ->method('dispatch')
-            ->willReturnCallback(function (GenericEvent $event, $name) {
-                $this->assertEquals(Events::BINDING_MESSAGE_RECEIVED, $name);
-                $this->assertNotEmpty($event->getSubject());
+            ->willReturnCallback(function (BindingMessageReceived $event) {
+                $this->assertNotEmpty($event->getMessageString());
                 $doc = new \DOMDocument();
-                $doc->loadXML($event->getSubject());
+                $doc->loadXML($event->getMessageString());
                 $this->assertEquals('AuthnRequest', $doc->firstChild->localName);
 
                 return $event;
