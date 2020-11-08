@@ -16,7 +16,7 @@ class StatementValidatorTest extends BaseTestCase
     public function test_unsupported_statement_fails()
     {
         $this->expectException('LightSaml\Error\LightSamlValidationException');
-        $this->expectExceptionMessageRegExp('/Unsupported Statement type \'\w+\'/');
+        $this->expectExceptionMessageMatches('/Unsupported Statement type \'\w+\'/');
         $statementMock = $this->getMockForAbstractClass('LightSaml\Model\Assertion\AbstractStatement');
 
         $validator = new StatementValidator();
