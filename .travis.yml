@@ -10,7 +10,7 @@ before_install:
     - composer --version
     - wget https://cs.symfony.com/download/php-cs-fixer-v2.phar -O php-cs-fixer.phar;
     - php php-cs-fixer.phar --version
-    - wget https://github.com/php-coveralls/php-coveralls/releases/download/v2.4.0/php-coveralls.phar
+    - wget https://github.com/php-coveralls/php-coveralls/releases/download/v2.4.2/php-coveralls.phar
 
 install:
     - COMPOSER_ROOT_VERSION=dev-master composer update --prefer-source $COMPOSER_FLAGS
