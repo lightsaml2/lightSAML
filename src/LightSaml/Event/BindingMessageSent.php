@@ -13,7 +13,7 @@ class BindingMessageSent extends Event
         $this->messageString = $messageString;
     }
 
-    public function getMessageString() : string
+    public function getMessageString(): string
     {
         return $this->messageString;
     }

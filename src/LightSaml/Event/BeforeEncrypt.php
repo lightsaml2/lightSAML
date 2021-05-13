@@ -14,7 +14,7 @@ class BeforeEncrypt extends Event
         $this->context = $context;
     }
 
-    public function getContext() : ContextInterface
+    public function getContext(): ContextInterface
     {
         return $this->context;
     }
