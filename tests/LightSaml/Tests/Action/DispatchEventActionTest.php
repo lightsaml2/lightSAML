@@ -14,7 +14,7 @@ class DispatchEventActionTest extends BaseTestCase
     public function test_constructs_with_logger_event_dispatcher_and_event_name()
     {
         new DispatchEventAction(
-            $this->getEventDispatcherMock(),
+            $this->getEventDispatcherMock()
         );
         $this->assertTrue(true);
     }
