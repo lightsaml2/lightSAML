@@ -11,7 +11,7 @@ before_install:
     - composer --version
     - if [ "$TRAVIS_PHP_VERSION" == "7.4" ]; then wget https://cs.symfony.com/download/php-cs-fixer-v2.phar -O php-cs-fixer.phar; fi
     - if [ "$TRAVIS_PHP_VERSION" == "7.4" ]; then php php-cs-fixer.phar --version; fi
-    - if [ "$TRAVIS_PHP_VERSION" == "7.4" ]; then wget https://github.com/php-coveralls/php-coveralls/releases/download/v2.4.0/php-coveralls.phar; fi
+    - if [ "$TRAVIS_PHP_VERSION" == "7.4" ]; then wget https://github.com/php-coveralls/php-coveralls/releases/download/v2.4.3/php-coveralls.phar; fi
 
 install:
     - COMPOSER_ROOT_VERSION=dev-master composer update --prefer-source $COMPOSER_FLAGS
