@@ -14,8 +14,8 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/lightsaml/lightsaml/issues",
-        "source": "https://github.com/lightSAML/lightSAML",
+        "issues": "https://github.com/lightsaml2/lightsaml/issues",
+        "source": "https://github.com/lightSAML2/lightSAML",
         "docs": "http://www.lightsaml.com/LightSAML-Core/"
     },
     "autoload": {
@@ -38,8 +38,8 @@
         "monolog/monolog": "~1.3"
     },
     "suggest": {
-        "lightsaml2/symfony-bridge": "Symfony 2 build container bridge",
-        "lightsaml2/sp-bundle": "Symfony 2 SP security bundle"
+        "lightsaml2/symfony-bridge": "Symfony build container bridge",
+        "lightsaml2/sp-bundle": "Symfony SP security bundle"
     },
     "config": {
         "bin-dir": "bin"
