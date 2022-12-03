@@ -14,7 +14,7 @@ namespace LightSaml\State\Sso;
 use LightSaml\Error\LightSamlException;
 use LightSaml\Meta\ParameterBag;
 
-class SsoSessionState implements \Serializable
+class SsoSessionState
 {
     /** @var string */
     protected $idpEntityId;
@@ -285,54 +285,29 @@ class SsoSessionState implements \Serializable
         throw new LightSamlException(sprintf('Party "%s" is not included in sso session between "%s" and "%s"', $partyId, $this->idpEntityId, $this->spEntityId));
     }
 
-    /**
-     * @return string the string representation of the object or null
-     */
-    public function serialize()
-    {
-        return serialize([
-            $this->idpEntityId,
-            $this->spEntityId,
-            $this->nameId,
-            $this->nameIdFormat,
-            $this->sessionIndex,
-            $this->sessionInstant,
-            $this->firstAuthOn,
-            $this->lastAuthOn,
-            [],
-            $this->parameters,
-        ]);
+    public function __serialize(): array {
+        return [
+            'idp_entity_id' => $this->idpEntityId,
+            'sp_entity_id' => $this->spEntityId,
+            'name_id' => $this->nameId,
+            'name_id_format' => $this->nameIdFormat,
+            'session_index' => $this->sessionIndex,
+            'session_instant' => $this->sessionInstant,
+            'first_auth_on' => $this->firstAuthOn,
+            'last_auth_on' => $this->lastAuthOn,
+            'parameters' => $this->parameters->all()
+        ];
     }
 
-    /**
-     * @param string $serialized
-     *
-     * @return void
-     */
-    public function unserialize($serialized)
-    {
-        $data = unserialize($serialized);
-
-        // add a few extra elements in the array to ensure that we have enough keys when unserializing
-        // older data which does not include all properties.
-        $data = array_merge($data, array_fill(0, 5, null));
-
-        list(
-            $this->idpEntityId,
-            $this->spEntityId,
-            $this->nameId,
-            $this->nameIdFormat,
-            $this->sessionIndex,
-            $this->sessionInstant,
-            $this->firstAuthOn,
-            $this->lastAuthOn,
-            $options,
-            $this->parameters
-        ) = $data;
-
-        // if deserialized from old format, set old options to new parameters
-        if ($options && 0 == $this->parameters->count()) {
-            $this->parameters->replace($options);
-        }
+    public function __unserialize(array $data): void {
+        $this->idpEntityId = $data['idp_entity_id'];
+        $this->spEntityId = $data['sp_entity_id'];
+        $this->nameId = $data['name_id'];
+        $this->nameIdFormat = $data['name_id_format'];
+        $this->sessionIndex = $data['session_index'];
+        $this->sessionInstant = $data['session_instant'];
+        $this->firstAuthOn = $data['first_auth_on'];
+        $this->lastAuthOn = $data['last_auth_on'];
+        $this->parameters = new ParameterBag($data['parameters']);
     }
 }

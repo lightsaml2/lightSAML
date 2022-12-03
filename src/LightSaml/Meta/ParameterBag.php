@@ -11,7 +11,9 @@
 
 namespace LightSaml\Meta;
 
-class ParameterBag implements \IteratorAggregate, \Countable, \Serializable
+use Traversable;
+
+class ParameterBag implements \IteratorAggregate, \Countable
 {
     /**
      * Parameter storage.
@@ -115,7 +117,7 @@ class ParameterBag implements \IteratorAggregate, \Countable, \Serializable
     /**
      * @return \ArrayIterator
      */
-    public function getIterator()
+    public function getIterator(): Traversable
     {
         return new \ArrayIterator($this->parameters);
     }
@@ -123,18 +125,16 @@ class ParameterBag implements \IteratorAggregate, \Countable, \Serializable
     /**
      * @return int
      */
-    public function count()
+    public function count(): int
     {
         return count($this->parameters);
     }
 
-    public function serialize()
-    {
-        return serialize($this->parameters);
+    public function __serialize(): array {
+        return $this->parameters;
     }
 
-    public function unserialize($serialized)
-    {
-        $this->parameters = unserialize($serialized);
+    public function __unserialize(array $data): void {
+        $this->parameters = $data;
     }
 }

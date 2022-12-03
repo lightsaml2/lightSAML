@@ -13,7 +13,7 @@ namespace LightSaml\State\Sso;
 
 use LightSaml\Meta\ParameterBag;
 
-class SsoState implements \Serializable
+class SsoState
 {
     /** @var string */
     private $localSessionId;
@@ -180,42 +180,17 @@ class SsoState implements \Serializable
         return $this;
     }
 
-    /**
-     * @return string the string representation of the object or null
-     */
-    public function serialize()
-    {
-        return serialize([
-            $this->localSessionId,
-            $this->ssoSessions,
-            [],
-            $this->parameters,
-        ]);
+    public function __serialize(): array {
+        return [
+            'id' => $this->localSessionId,
+            'sessions' => $this->ssoSessions,
+            'parameters' => $this->parameters->all(),
+        ];
     }
 
-    /**
-     * @param string $serialized
-     *
-     * @return void
-     */
-    public function unserialize($serialized)
-    {
-        $data = unserialize($serialized);
-
-        // add a few extra elements in the array to ensure that we have enough keys when unserializing
-        // older data which does not include all properties.
-        $data = array_merge($data, array_fill(0, 5, null));
-        $oldOptions = null;
-
-        list(
-            $this->localSessionId,
-            $this->ssoSessions,
-            $oldOptions, // old deprecated options
-            $this->parameters) = $data;
-
-        // in case it was serialized in old way, copy old options to parameters
-        if ($oldOptions && 0 == $this->parameters->count()) {
-            $this->parameters->add($oldOptions);
-        }
+    public function __unserialize(array $data): void {
+        $this->localSessionId = $data['id'];
+        $this->ssoSessions = $data['sessions'];
+        $this->parameters = new ParameterBag($data['parameters']);
     }
 }
