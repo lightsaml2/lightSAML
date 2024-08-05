@@ -25,19 +25,18 @@
         }
     },
     "require": {
-        "php": "^7.2|^8.0",
+        "php": "^8.0",
         "psr/log": "^1|^2|^3",
         "robrichards/xmlseclibs": "^3.0",
-        "symfony/http-foundation": "^4.4|^5.4|^6.0",
-        "symfony/event-dispatcher": "^4.4|^5.4|^6.0",
+        "symfony/http-foundation": "^6.4|^7.0",
+        "symfony/event-dispatcher": "^6.4|^7.0",
         "ext-dom": "*",
         "ext-json": "*"
     },
     "require-dev": {
-        "symfony/dom-crawler": "^4.4|^5.4|^6.0",
-        "symfony/css-selector": "^4.4|^5.4|^6.0",
-        "pimple/pimple": "~3.0",
-        "phpunit/phpunit": "^8.0|^9.0"
+        "symfony/dom-crawler": "^6.4|^7.0",
+        "symfony/css-selector": "^6.4|^7.0",
+        "phpunit/phpunit": "^10.0|^11.0"
     },
     "suggest": {
         "lightsaml2/symfony-bridge": "Symfony build container bridge",
