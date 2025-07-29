@@ -31,7 +31,7 @@ class ProxyRestriction extends AbstractCondition
      * @param int      $count
      * @param string[] $audience
      */
-    public function __construct($count = null, array $audience = null)
+    public function __construct($count = null, ?array $audience = null)
     {
         $this->count = $count;
         $this->audience = $audience;

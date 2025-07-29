@@ -209,7 +209,7 @@ abstract class SamlMessage extends AbstractSamlModel
     /**
      * @return SamlMessage
      */
-    public function setIssuer(Issuer $issuer = null)
+    public function setIssuer(?Issuer $issuer = null)
     {
         $this->issuer = $issuer;
 
@@ -247,7 +247,7 @@ abstract class SamlMessage extends AbstractSamlModel
     /**
      * @return SamlMessage
      */
-    public function setSignature(Signature $signature = null)
+    public function setSignature(?Signature $signature = null)
     {
         $this->signature = $signature;
 

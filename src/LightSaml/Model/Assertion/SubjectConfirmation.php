@@ -53,7 +53,7 @@ class SubjectConfirmation extends AbstractSamlModel
     /**
      * @return SubjectConfirmation
      */
-    public function setEncryptedId(EncryptedElement $encryptedId = null)
+    public function setEncryptedId(?EncryptedElement $encryptedId = null)
     {
         $this->encryptedId = $encryptedId;
 
@@ -71,7 +71,7 @@ class SubjectConfirmation extends AbstractSamlModel
     /**
      * @return SubjectConfirmation
      */
-    public function setNameID(NameID $nameId = null)
+    public function setNameID(?NameID $nameId = null)
     {
         $this->nameId = $nameId;
 
@@ -89,7 +89,7 @@ class SubjectConfirmation extends AbstractSamlModel
     /**
      * @return SubjectConfirmation
      */
-    public function setSubjectConfirmationData(SubjectConfirmationData $subjectConfirmationData = null)
+    public function setSubjectConfirmationData(?SubjectConfirmationData $subjectConfirmationData = null)
     {
         $this->subjectConfirmationData = $subjectConfirmationData;
 

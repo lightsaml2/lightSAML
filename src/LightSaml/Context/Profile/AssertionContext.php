@@ -58,7 +58,7 @@ class AssertionContext extends AbstractProfileContext
      *
      * @return AssertionContext
      */
-    public function setAssertion(Assertion $assertion = null)
+    public function setAssertion(?Assertion $assertion = null)
     {
         $this->assertion = $assertion;
 
@@ -78,7 +78,7 @@ class AssertionContext extends AbstractProfileContext
      *
      * @return AssertionContext
      */
-    public function setEncryptedAssertion(EncryptedElement $encryptedAssertion = null)
+    public function setEncryptedAssertion(?EncryptedElement $encryptedAssertion = null)
     {
         $this->encryptedAssertion = $encryptedAssertion;
 

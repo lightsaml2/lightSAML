@@ -137,7 +137,7 @@ class Assertion extends AbstractSamlModel
     /**
      * @return Assertion
      */
-    public function setConditions(Conditions $conditions = null)
+    public function setConditions(?Conditions $conditions = null)
     {
         $this->conditions = $conditions;
 
@@ -223,7 +223,7 @@ class Assertion extends AbstractSamlModel
      *
      * @return Assertion
      */
-    public function setIssuer(Issuer $issuer = null)
+    public function setIssuer(?Issuer $issuer = null)
     {
         $this->issuer = $issuer;
 
@@ -243,7 +243,7 @@ class Assertion extends AbstractSamlModel
      *
      * @return Assertion
      */
-    public function setSignature(Signature $signature = null)
+    public function setSignature(?Signature $signature = null)
     {
         $this->signature = $signature;
 

@@ -24,7 +24,7 @@ class BindingFactory implements BindingFactoryInterface
     /**
      * @param EventDispatcherInterface $eventDispatcher
      */
-    public function __construct(EventDispatcherInterface $eventDispatcher = null)
+    public function __construct(?EventDispatcherInterface $eventDispatcher = null)
     {
         $this->eventDispatcher = $eventDispatcher;
     }
@@ -32,7 +32,7 @@ class BindingFactory implements BindingFactoryInterface
     /**
      * @return BindingFactoryInterface
      */
-    public function setEventDispatcher(EventDispatcherInterface $eventDispatcher = null)
+    public function setEventDispatcher(?EventDispatcherInterface $eventDispatcher = null)
     {
         $this->eventDispatcher = $eventDispatcher;
 

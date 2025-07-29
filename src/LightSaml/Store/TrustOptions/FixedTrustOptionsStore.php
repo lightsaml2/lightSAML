@@ -21,7 +21,7 @@ class FixedTrustOptionsStore implements TrustOptionsStoreInterface
     /**
      * @param TrustOptions $option
      */
-    public function __construct(TrustOptions $option = null)
+    public function __construct(?TrustOptions $option = null)
     {
         $this->option = $option;
     }
@@ -29,7 +29,7 @@ class FixedTrustOptionsStore implements TrustOptionsStoreInterface
     /**
      * @return FixedTrustOptionsStore
      */
-    public function setTrustOptions(TrustOptions $trustOptions = null)
+    public function setTrustOptions(?TrustOptions $trustOptions = null)
     {
         $this->option = $trustOptions;
 

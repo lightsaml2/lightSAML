@@ -22,7 +22,7 @@ abstract class LogHelper
      *
      * @return array
      */
-    public static function getActionContext(ContextInterface $context, ActionInterface $action, array $extraData = null)
+    public static function getActionContext(ContextInterface $context, ActionInterface $action, ?array $extraData = null)
     {
         return self::getContext($context, $action, $extraData, false);
     }
@@ -32,7 +32,7 @@ abstract class LogHelper
      *
      * @return array
      */
-    public static function getActionErrorContext(ContextInterface $context, ActionInterface $action, array $extraData = null)
+    public static function getActionErrorContext(ContextInterface $context, ActionInterface $action, ?array $extraData = null)
     {
         return self::getContext($context, $action, $extraData, true);
     }
@@ -44,7 +44,7 @@ abstract class LogHelper
      *
      * @return array
      */
-    private static function getContext(ContextInterface $context, ActionInterface $action = null, array $extraData = null, $logWholeContext = false)
+    private static function getContext(ContextInterface $context, ?ActionInterface $action = null, ?array $extraData = null, $logWholeContext = false)
     {
         $topContext = $context->getTopParent();
         $result = [];
